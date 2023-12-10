@@ -1,1 +1,33 @@
 /* write your override styles here */
+#wall .tag-1 {display: none;} /* This selector target the ekement with the class tag-1 that is descendant of the element with the ID wall. 
+This selector has more specificity thatn the one that is currently showing the graffiti tag because it has both an ID nad a class, while the existing slector likely only has a class. */
+
+#tag-2 { display: none; }
+/* This selector simply targets the element with the ID tag-2. 
+This selector has more specificity than the existing selector because it has an ID, 
+while the existing selector likely only has a class.*/
+
+#tag-3 { display: none; }
+
+/* Similarly, this selector targets the element with the ID tag-3. 
+It has more specificity than the existing selector due to the ID.*/
+
+.parent #tag-4 { display: none; }
+
+/* This selector targets the element with the ID tag-4 that is a descendant of the element with the class parent. 
+It has more specificity than the existing selector due to the combination of class and ID.*/
+
+.parent #tag-5 { display: none; }
+
+/*This selector follows the same pattern as the previous one, 
+targeting the element with the ID tag-5 within the element with the class parent.*/
+
+.parent div div #tag-6 { display: none; }
+
+/* This selector is more complex, targeting the element with the ID tag-6 that is nested three levels deep within the element with the class parent. 
+It has more specificity due to the combination of class and ID selectors, as well as the descendant relationship.*/
+
+.parent div:nth-child(2) div #tag-7 { display: none; }
+
+/* This selector uses the nth-child pseudo-class to target the second div element within the element with the class parent that also has a descendant element with the ID tag-7. 
+This selector is likely more specific than the existing selector due to the combination of the pseudo-class and the descendant relationship.*/
